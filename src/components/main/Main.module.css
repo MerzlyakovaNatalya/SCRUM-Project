@@ -1,0 +1,32 @@
+.main {
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(243, 232, 243);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+}
+
+h1 {
+    color: rgb(93, 51, 99);
+    margin-left: 40px;
+    padding-top: 50px;
+}
+
+h2 {
+    color: rgb(93, 51, 99);
+    margin-left: 40px;
+    padding-top: 50px;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+.city {
+    padding: 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 10px;
+    border-radius: 5px;
+}
