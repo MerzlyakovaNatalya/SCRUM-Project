@@ -1,0 +1,1 @@
+export const CITY = Array.from({length:14});
