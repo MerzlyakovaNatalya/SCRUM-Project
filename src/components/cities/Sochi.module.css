@@ -1,7 +1,11 @@
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 h3 {
-    color: rgb(93, 51, 99);
+  color: rgb(93, 51, 99);
+}
+
+.description {
+  padding-left: 10px;
 }

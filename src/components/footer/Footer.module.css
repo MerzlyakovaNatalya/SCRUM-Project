@@ -1,0 +1,12 @@
+.footer {
+  margin: 0 auto;
+  width: 90%;
+  height: 300px;
+  margin-top: 50px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.button {
+  justify-content: space-between;
+}

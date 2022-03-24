@@ -1,8 +1,13 @@
 li {
-    list-style-type: none;
-    box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  list-style-type: none;
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
 }
 
 h3 {
-    color: rgb(93, 51, 99);
+  color: rgb(93, 51, 99);
+  padding-left: 10px;
+}
+
+.description {
+  padding-left: 10px;
 }
