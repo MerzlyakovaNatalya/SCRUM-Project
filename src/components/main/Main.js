@@ -30,6 +30,9 @@ export const Main= () => {
                 </li>
             </ul>
             <div>
+            <div className={style.wrapl_ink}>
+              <a className={style.link}>Посмотреть другие города</a>
+            </div>
             <h2>Поиск по типу размещения</h2>
             <ul className={style.wrap}>
               <li>
@@ -45,6 +48,9 @@ export const Main= () => {
               <Hotel_4></Hotel_4>
               </li>
             </ul>
+            <div className={style.wrapl_ink}>
+            <a className={style.link} src="#">Посмотреть ещё варианты</a>
+            </div>
         </div>
         <Button href="#text-buttons" color='secondary' sx={{
                fontSize: 16,

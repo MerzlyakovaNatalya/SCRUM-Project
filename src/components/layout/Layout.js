@@ -15,7 +15,7 @@ export const Layout = () => {
           <div className={style.wrapper}>
             <Button
               component={Link}
-              to="layout"
+              to="/"
               color="secondary"
               sx={{
                 fontSize: 16,
@@ -27,7 +27,7 @@ export const Layout = () => {
                 borderRadius: 10,
               }}
             >
-              Войти
+              Главная
             </Button>
             <Button
               href="#"
