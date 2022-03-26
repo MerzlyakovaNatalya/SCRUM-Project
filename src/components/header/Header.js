@@ -1,45 +1,58 @@
-import style from './Header.module.css';
-import img from '../../images/Brend_4.png';
-import svg from '../../images/reply-all-solid.svg';
-import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
-import { Outlet } from 'react-router-dom';
-
+import style from "./Header.module.css";
+import img from "../../images/Brend_4.png";
+import svg from "../../images/reply-all-solid.svg";
+import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { Form } from "../Form";
+import { useState } from "react";
 
 export const Header = () => {
+  const [dateForm, setDateForm] = useState({});
 
-    return (
-      <>
+  const handleSubmit = (date) => {
+    setDateForm(date);
+    console.log(date);
+  };
+
+  return (
+    <>
       <div className={style.wrap}>
-          <section className={style.section}>
-             <img src={img} alt="brend"/>
-             <div className={style.wrapper}>
-             <Button component={Link} to='layout' color='secondary' sx={{
-               fontSize: 16,
-               fontWeight: 'bold',
-               minWidth: 100,
-               backgroundColor: "#e7f1f1",
-               opacity: .6,
-               marginRight: 15,
-               borderRadius: 10,
-                }}
-               >Войти</Button>
-             <Button href="#text-buttons" color='secondary' sx={{
-               fontSize: 16,
-               fontWeight: 'bold',
-               minWidth: 200,
-               backgroundColor: "#e7f1f1",
-               opacity: .6,
-               marginRight: 15,
-               borderRadius: 10,
-               }}>Регистрация</Button>
-             </div>
-             <p className={style.text}>Чтобы изменить мир, надо его увидеть... </p>
-             <Link to="layout" className={style.button}>Войти</Link>
-             <img src={svg} alt="войти" className={style.svg}/>
-          </section>
-          <Outlet></Outlet>
-        </div>
-      </>
-    )
-}
+        <section className={style.section}>
+          <img className={style.logo} src={img} alt="brend" />
+          <div className={style.wrapper}>
+            <Button
+              component={Link}
+              variant="contained"
+              to="layout"
+              color="secondary"
+              sx={{ borderRadius: 3, marginRight: 15, bgcolor: "#b91bf8" }}
+            >
+              Войти
+            </Button>
+            <Button
+              href="#text-buttons"
+              color="secondary"
+              variant="contained"
+              sx={{ borderRadius: 3, marginRight: 15, bgcolor: "#b91bf8" }}
+            >
+              Регистрация
+            </Button>
+          </div>
+          <Form onSubmit={handleSubmit} />
+          <div className={style.wrp}>
+            <p className={style.text}>
+              Чтобы изменить мир, надо его увидеть...{" "}
+            </p>
+            <Link to="layout" className={style.button}>
+              Войти
+            </Link>
+            <img src={svg} alt="войти" className={style.svg} />
+          </div>
+        </section>
+
+        <Outlet></Outlet>
+      </div>
+    </>
+  );
+};

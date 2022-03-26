@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import { Main } from "../main/Main";
 import { Link } from "react-router-dom";
 import { Footer } from "../footer/Footer";
+import { Form } from "../Form";
 
 export const Layout = () => {
   return (
