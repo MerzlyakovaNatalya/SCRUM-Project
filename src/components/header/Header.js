@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { Form } from "../Form";
 import { useState } from "react";
+import { CopyLayout} from "../copyLayout/CopyLayout";
 
 export const Header = () => {
   const [dateForm, setDateForm] = useState({});
@@ -21,7 +22,16 @@ export const Header = () => {
         <section className={style.section}>
           <img className={style.logo} src={img} alt="brend" />
           <div className={style.wrapper}>
-            <Button
+          <Button
+              component={Link}
+              variant="contained"
+              to="private"
+              color="secondary"
+              sx={{ borderRadius: 3, marginRight: 15, bgcolor: "#b91bf8" }}
+            >
+              Личный кабинет
+            </Button>
+            {/*<Button
               component={Link}
               variant="contained"
               to="layout"
@@ -37,7 +47,7 @@ export const Header = () => {
               sx={{ borderRadius: 3, marginRight: 15, bgcolor: "#b91bf8" }}
             >
               Регистрация
-            </Button>
+            </Button>*/}
           </div>
           <Form onSubmit={handleSubmit} />
           <div className={style.wrp}>
@@ -47,11 +57,13 @@ export const Header = () => {
             <Link to="layout" className={style.button}>
               Войти
             </Link>
-            <img src={svg} alt="войти" className={style.svg} />
+           {/* <img src={svg} alt="войти" className={style.svg} />*/}
           </div>
         </section>
-
         <Outlet></Outlet>
+      </div>
+      <div>
+      <CopyLayout></CopyLayout>
       </div>
     </>
   );

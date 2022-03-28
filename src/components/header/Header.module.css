@@ -36,13 +36,11 @@
 
 .button {
   /* position: absolute; */
-  top: 87%;
-  left: 30%;
   font-size: 20px;
   font-family: sans-serif;
-  color: #f7f6f2;
+  color: #faf9f6;
   font-weight: bold;
-  margin: 0 5px 0 0;
+  margin: 0 60px 0 0;
 }
 
 .svg {

@@ -7,7 +7,6 @@ export const Hotel_2 = () => {
     <div className={style.wrap}>
       <img src={img} alt="Moscow" />
       <h3>Апартаменты</h3>
-      <a className={style.link} src="#">Посмотреть ещё варианты</a>
     </div>
   );
 };
