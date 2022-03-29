@@ -10,8 +10,8 @@ export const CopyLayout = () => {
   return (
     <>
       <div className={style.wrap}>
-          <Main></Main>
-          <Footer></Footer>
+        <Main></Main>
+        <Footer></Footer>
       </div>
     </>
   );

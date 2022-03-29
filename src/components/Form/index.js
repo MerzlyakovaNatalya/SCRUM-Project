@@ -14,6 +14,7 @@ import {
 import { Box } from "@mui/system";
 import { useState } from "react";
 import "./form.scss";
+import { FormResponse } from "../form_response/FormResponse";
 
 const theme = createTheme({
   palette: {
@@ -191,6 +192,7 @@ export const Form = ({ onSubmit }) => {
             Найти
           </Button>
         </Box>
+        <FormResponse infoForm={infoForm}></FormResponse>
       </ThemeProvider>
     </>
   );
