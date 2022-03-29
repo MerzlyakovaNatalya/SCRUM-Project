@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { Form } from "../Form";
 import { useState } from "react";
-import { CopyLayout} from "../copyLayout/CopyLayout";
+import { CopyLayout } from "../copyLayout/CopyLayout";
 
 export const Header = () => {
   const [dateForm, setDateForm] = useState({});
@@ -22,7 +22,7 @@ export const Header = () => {
         <section className={style.section}>
           <img className={style.logo} src={img} alt="brend" />
           <div className={style.wrapper}>
-          <Button
+            <Button
               component={Link}
               variant="contained"
               to="private"
@@ -54,16 +54,16 @@ export const Header = () => {
             <p className={style.text}>
               Чтобы изменить мир, надо его увидеть...{" "}
             </p>
-            <Link to="layout" className={style.button}>
+            <Link to="layout/main" className={style.button}>
               Войти
             </Link>
-           {/* <img src={svg} alt="войти" className={style.svg} />*/}
+            {/* <img src={svg} alt="войти" className={style.svg} />*/}
           </div>
         </section>
         <Outlet></Outlet>
       </div>
       <div>
-      <CopyLayout></CopyLayout>
+        <CopyLayout></CopyLayout>
       </div>
     </>
   );
