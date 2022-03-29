@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import { Main } from "../main/Main";
 import { Link } from "react-router-dom";
 import { Footer } from "../footer/Footer";
+import { Outlet } from "react-router-dom";
 import { Form } from "../Form";
 
 export const Layout = () => {
@@ -45,7 +46,7 @@ export const Layout = () => {
               Регистрация
             </Button>
           </div>
-          <Main></Main>
+          <Outlet></Outlet>
           <Footer></Footer>
         </section>
       </div>
