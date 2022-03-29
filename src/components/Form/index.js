@@ -46,11 +46,12 @@ const initialState = {
   guest: "1",
 };
 
-export const Form = ({ onSubmit }) => {
+export const Form = ({ onSubmit, searchOthels }) => {
   const [infoForm, setInfoForm] = useState(initialState);
 
   const handleClick = () => {
     onSubmit(infoForm);
+    searchOthels();
   };
 
   const handleCityChange = (e) => {

@@ -1,11 +1,24 @@
 .wrap {
   width: 100%;
   background-color: #e4f3f33d;
-  height: 300px;
+  height: 400px;
   margin-bottom: 20px;
 }
 
 .text {
   text-align: center;
   color: rgb(253 253 253);
+}
+
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 300px;
+  overflow: auto;
+}
+
+.search_item {
+  margin: 5px;
+  width: 20%;
 }
