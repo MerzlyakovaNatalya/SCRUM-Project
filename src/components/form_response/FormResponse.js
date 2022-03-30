@@ -1,8 +1,7 @@
 import style from "./FormResponse.module.css";
-import { useState, useEffect } from "react";
 
-export const FormResponse = (infoForm) => {
-  const [othels, setOthels] = useState([]);
+export const FormResponse = (props) => {
+  /*const [othels, setOthels] = useState([]);
 
   const searchInfo = {
     header: {
@@ -17,9 +16,13 @@ export const FormResponse = (infoForm) => {
       //children: [3, 8],
       //meal_code: ["AI", "FB"],
     },
-  };
+  };*/
 
-  useEffect(() => {
+  //const onSubmit = () => {
+  //console.log(124);
+  //};
+
+  /*useEffect(() => {
     fetch("https://www.multitour.ru/api/v2/", {
       method: "POST",
       body: JSON.stringify(searchInfo),
@@ -28,20 +31,28 @@ export const FormResponse = (infoForm) => {
       .then((result) => setOthels(result.response));
 
     console.log(othels);
-  }, [infoForm]);
+  }, [infoForm]);*/
 
-  return (
-    <div className={style.wrap}>
-      <h1 className={style.text}>Результат поиска</h1>
-      <div className={style.search}>
-        {othels.map((item) => (
-          <div className={style.search_item}>
-            <h3>{item.id}</h3>
-            <p>{item.room_name}</p>
-            <p>цена {item.price} рублей</p>
-          </div>
-        ))}
+  const othels = props.othels;
+
+  console.log(othels);
+
+  if (othels.length < 1) {
+    return <div></div>;
+  } else {
+    return (
+      <div className={style.wrap}>
+        <h1 className={style.text}>Результат поиска</h1>
+        <div className={style.search}>
+          {othels.map((item, index) => (
+            <div className={style.search_item} key={index}>
+              <h3>{item.id}</h3>
+              <p>{item.room_name}</p>
+              <p>цена {item.price} рублей</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };

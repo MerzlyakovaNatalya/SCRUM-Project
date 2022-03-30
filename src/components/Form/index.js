@@ -15,6 +15,7 @@ import { Box } from "@mui/system";
 import { useState } from "react";
 import "./form.scss";
 import { FormResponse } from "../form_response/FormResponse";
+import { useForm } from "../hooks/useForm";
 
 const theme = createTheme({
   palette: {
@@ -46,7 +47,8 @@ const initialState = {
   guest: "1",
 };
 
-export const Form = ({ onSubmit, searchOthels }) => {
+export const Form = () => {
+  const [othels, { onSubmit, searchOthels }] = useForm();
   const [infoForm, setInfoForm] = useState(initialState);
 
   const handleClick = () => {
@@ -193,7 +195,7 @@ export const Form = ({ onSubmit, searchOthels }) => {
             Найти
           </Button>
         </Box>
-        <FormResponse infoForm={infoForm}></FormResponse>
+        <FormResponse othels={othels}></FormResponse>
       </ThemeProvider>
     </>
   );
