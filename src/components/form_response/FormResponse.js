@@ -1,9 +1,10 @@
 import style from "./FormResponse.module.css";
+import { useState, useEffect } from "react";
 
 export const FormResponse = (props) => {
-  /*const [othels, setOthels] = useState([]);
+  const [othels, setOthels] = useState([]);
 
-  const searchInfo = {
+  /* const searchInfo = {
     header: {
       token: "9ca2449d91382adee964b679e98c246d",
       method: "Hotel.Offers",
@@ -33,11 +34,24 @@ export const FormResponse = (props) => {
     console.log(othels);
   }, [infoForm]);*/
 
-  const othels = props.othels;
+  const info = props.info;
 
-  console.log(othels);
+  useEffect(() => {
+    fetch("https://www.multitour.ru/api/v2/", {
+      method: "POST",
+      body: JSON.stringify(info),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.header.token == null) {
+          return <div></div>;
+        }
+        const copyOthels = [...othels, result];
+        setOthels(copyOthels);
+      });
+  }, [info]);
 
-  if (othels.length < 1) {
+  if (othels.length < 0) {
     return <div></div>;
   } else {
     return (
@@ -46,9 +60,10 @@ export const FormResponse = (props) => {
         <div className={style.search}>
           {othels.map((item, index) => (
             <div className={style.search_item} key={index}>
-              <h3>{item.id}</h3>
-              <p>{item.room_name}</p>
-              <p>цена {item.price} рублей</p>
+              <h1>{item.header.method}</h1>
+              <h2>Город{item.request.city_id}</h2>
+              <p>дата приезда {item.request.date_begin}</p>
+              <p>дата отъезда {item.request.date_end}</p>
             </div>
           ))}
         </div>

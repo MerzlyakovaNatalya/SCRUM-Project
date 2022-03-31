@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const useForm = () => {
-  const [othels, setOthels] = useState([]);
   const [info, setInfo] = useState({});
 
   const onSubmit = (infoForm) => {
@@ -22,22 +21,10 @@ export const useForm = () => {
     setInfo(searchInfo);
   };
 
-  const searchOthels = () => {
-    fetch("https://www.multitour.ru/api/v2/", {
-      method: "POST",
-      body: JSON.stringify(info),
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        const copyOthels = [...othels, result];
-        setOthels(copyOthels);
-      });
-  };
   return [
-    othels,
+    info,
     {
       onSubmit,
-      searchOthels,
     },
   ];
 };
