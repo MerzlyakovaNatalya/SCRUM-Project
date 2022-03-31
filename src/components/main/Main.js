@@ -14,7 +14,9 @@ export const Main = () => {
   return (
     <>
       <div className={style.main}>
-        <h1>Раз в год отправляйся туда, где ты ещё ни разу не был!</h1>
+        <h1 className={style.textH1}>
+          Раз в год отправляйся туда, где ты ещё ни разу не был!
+        </h1>
         <ul className={style.wrap}>
           <li>
             <Moscow></Moscow>
@@ -35,7 +37,7 @@ export const Main = () => {
               Посмотреть другие города
             </Link>
           </div>
-          <h2>Поиск по типу размещения</h2>
+          <h2 className={style.textH2}>Поиск по типу размещения</h2>
           <ul className={style.wrap}>
             <li>
               <Link to="feedback">
