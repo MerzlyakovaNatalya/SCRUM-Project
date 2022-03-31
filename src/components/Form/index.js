@@ -48,12 +48,12 @@ const initialState = {
 };
 
 export const Form = () => {
-  const [othels, { onSubmit, searchOthels }] = useForm();
+  const [info, { onSubmit }] = useForm();
   const [infoForm, setInfoForm] = useState(initialState);
 
   const handleClick = () => {
     onSubmit(infoForm);
-    searchOthels();
+    //searchOthels();
   };
 
   const handleCityChange = (e) => {
@@ -195,7 +195,7 @@ export const Form = () => {
             Найти
           </Button>
         </Box>
-        <FormResponse othels={othels}></FormResponse>
+        <FormResponse info={info}></FormResponse>
       </ThemeProvider>
     </>
   );
