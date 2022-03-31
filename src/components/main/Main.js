@@ -31,14 +31,14 @@ export const Main = () => {
         </ul>
         <div>
           <div className={style.wrapl_ink}>
-            <Link to="layout/cityDirectory" className={style.link}>
+            <Link to="cityDirectory" className={style.link}>
               Посмотреть другие города
             </Link>
           </div>
           <h2>Поиск по типу размещения</h2>
           <ul className={style.wrap}>
             <li>
-              <Link to="layout/feedback">
+              <Link to="feedback">
                 <Hotel_1></Hotel_1>
               </Link>
             </li>
@@ -53,7 +53,7 @@ export const Main = () => {
             </li>
           </ul>
           <div className={style.wrapl_ink}>
-            <Link to="layout/hotelDirectory" className={style.link}>
+            <Link to="hotelDirectory" className={style.link}>
               Посмотреть ещё варианты
             </Link>
           </div>
@@ -62,13 +62,15 @@ export const Main = () => {
           href="#text-buttons"
           color="secondary"
           sx={{
-            fontSize: 16,
-            fontWeight: "bold",
+            fontSize: 12,
+            fontWeight: "normal",
             minWidth: 100,
             backgroundColor: "#e7f1f1",
             marginRight: 15,
             borderRadius: 10,
             marginBottom: 3,
+            marginLeft: 3,
+            marginTop: 2,
           }}
         >
           Назад

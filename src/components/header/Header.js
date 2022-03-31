@@ -25,7 +25,7 @@ export const Header = () => {
             <Button
               component={Link}
               variant="contained"
-              to="private"
+              to="layout/private"
               color="secondary"
               sx={{ borderRadius: 3, marginRight: 15, bgcolor: "#b91bf8" }}
             >
@@ -54,7 +54,7 @@ export const Header = () => {
             <p className={style.text}>
               Чтобы изменить мир, надо его увидеть...{" "}
             </p>
-            <Link to="layout/main" className={style.button}>
+            <Link to="layout" className={style.button}>
               Войти
             </Link>
             {/* <img src={svg} alt="войти" className={style.svg} />*/}

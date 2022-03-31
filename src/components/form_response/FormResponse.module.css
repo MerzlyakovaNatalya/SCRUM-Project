@@ -22,3 +22,8 @@
   margin: 5px;
   width: 20%;
 }
+
+.empty {
+  margin: 0;
+  padding: 0;
+}
