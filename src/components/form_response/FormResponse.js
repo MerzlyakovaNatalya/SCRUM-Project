@@ -44,7 +44,7 @@ export const FormResponse = (props) => {
       .then((res) => res.json())
       .then((result) => {
         if (result.header.token == null) {
-          return <div className={style.empty}></div>;
+          return <div></div>;
         }
         const copyOthels = [...othels, result];
         setOthels(copyOthels);
@@ -56,14 +56,17 @@ export const FormResponse = (props) => {
 
   return (
     <div className={style.wrap}>
-      <h1 className={style.text}>Результат поиска</h1>
       <div className={style.search}>
         {othels.map((item, index) => (
           <div className={style.search_item} key={index}>
-            <h1>{item.header.method}</h1>
-            <h2>Город{item.request.city_id}</h2>
-            <p>дата приезда {item.request.date_begin}</p>
-            <p>дата отъезда {item.request.date_end}</p>
+            <h1 className={style.text_hotel}>{item.header.method}</h1>
+            <h2 className={style.text_city}>Город{item.request.city_id}</h2>
+            <p className={style.description}>
+              дата приезда {item.request.date_begin}
+            </p>
+            <p className={style.description}>
+              дата отъезда {item.request.date_end}
+            </p>
           </div>
         ))}
       </div>

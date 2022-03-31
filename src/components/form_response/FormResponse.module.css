@@ -1,29 +1,43 @@
 .wrap {
   width: 100%;
   background-color: #e4f3f33d;
-  height: 400px;
   margin-bottom: 20px;
-}
-
-.text {
-  text-align: center;
-  color: rgb(253 253 253);
 }
 
 .search {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 300px;
   overflow: auto;
 }
 
 .search_item {
   margin: 5px;
-  width: 20%;
+  min-width: 20%;
+  background-color: #f3f6f6d6;
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  border-radius: 7px;
+  padding-bottom: 10px;
 }
 
 .empty {
   margin: 0;
   padding: 0;
+}
+
+.text_city {
+  color: rgb(93, 51, 99);
+  margin-left: 15px;
+}
+
+.text_hotel {
+  color: rgb(93, 51, 99);
+  margin-left: 15px;
+  padding-top: 15px;
+}
+
+.description {
+  color: rgb(93, 51, 99);
+  margin-left: 15px;
+  padding-top: 5px;
 }
