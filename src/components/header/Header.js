@@ -1,21 +1,21 @@
 import style from "./Header.module.css";
 import img from "../../images/Brend_4.png";
-import svg from "../../images/reply-all-solid.svg";
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { Form } from "../Form";
 import { useState } from "react";
 import { CopyLayout } from "../copyLayout/CopyLayout";
+import { useDispatch, useSelector } from "react-redux";
+import { getForm } from "../../store/form/actions";
 
 export const Header = () => {
-  const [dateForm, setDateForm] = useState({});
-
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const handleSubmit = (date) => {
-    setDateForm(date);
-    console.log(date);
+    dispatch(getForm(date));
+    navigate("layout/hotels");
   };
-
   return (
     <>
       <div className={style.wrap}>
@@ -30,15 +30,6 @@ export const Header = () => {
               sx={{ borderRadius: 3, marginRight: 15, bgcolor: "#b91bf8" }}
             >
               Личный кабинет
-            </Button>
-            <Button
-              component={Link}
-              variant="contained"
-              to="layout/hotels"
-              color="secondary"
-              sx={{ borderRadius: 3, marginRight: 15, bgcolor: "#b91bf8" }}
-            >
-              Отели
             </Button>
             {/*<Button
               component={Link}

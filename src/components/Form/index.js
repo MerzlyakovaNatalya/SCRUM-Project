@@ -12,10 +12,8 @@ import {
 } from "@mui/material";
 
 import { Box } from "@mui/system";
-import { useState } from "react";
 import "./form.scss";
-import { FormResponse } from "../form_response/FormResponse";
-import { useForm } from "../hooks/useForm";
+import { useState } from "react";
 
 const theme = createTheme({
   palette: {
@@ -47,41 +45,27 @@ const initialState = {
   guest: "1",
 };
 
-export const Form = () => {
-  const [info, { onSubmit }] = useForm();
-  const [infoForm, setInfoForm] = useState(initialState);
+export const Form = ({ onSubmit }) => {
+  const [values, setValues] = useState(initialState);
 
   const handleClick = () => {
-    onSubmit(infoForm);
-    //searchOthels();
+    onSubmit(values);
   };
 
   const handleCityChange = (e) => {
-    setInfoForm((prevSetInfoForm) => ({
-      ...prevSetInfoForm,
-      city: e.target.value,
-    }));
+    setValues((prevValues) => ({ ...prevValues, city: e.target.value }));
   };
 
   const handleGuestChange = (e) => {
-    setInfoForm((prevSetInfoForm) => ({
-      ...prevSetInfoForm,
-      guest: e.target.value,
-    }));
+    setValues((prevValues) => ({ ...prevValues, guest: e.target.value }));
   };
 
   const handleCheckIn = (newDate) => {
-    setInfoForm((prevSetInfoForm) => ({
-      ...prevSetInfoForm,
-      checkIn: +newDate,
-    }));
+    setValues((prevValues) => ({ ...prevValues, checkIn: newDate }));
   };
 
   const handleCheckOut = (newDate) => {
-    setInfoForm((prevSetInfoForm) => ({
-      ...prevSetInfoForm,
-      checkOut: +newDate,
-    }));
+    setValues((prevValues) => ({ ...prevValues, checkOut: newDate }));
   };
 
   return (
@@ -99,7 +83,7 @@ export const Form = () => {
             id="outlined-basic"
             label="Направление"
             variant="filled"
-            value={infoForm.city}
+            value={values.city}
             onChange={handleCityChange}
             InputProps={{ disableUnderline: true }}
             sx={{
@@ -116,7 +100,7 @@ export const Form = () => {
               label="Заезд"
               mask={maskMap.ru}
               inputFormat="dd.MM.yyyy"
-              value={infoForm.checkIn}
+              value={values.checkIn}
               onChange={handleCheckIn}
               InputProps={{ disableUnderline: true }}
               renderInput={(params) => (
@@ -136,7 +120,7 @@ export const Form = () => {
               label="Выезд"
               mask={maskMap.ru}
               inputFormat="dd.MM.yyyy"
-              value={infoForm.checkOut}
+              value={values.checkOut}
               onChange={handleCheckOut}
               InputProps={{ disableUnderline: true }}
               renderInput={(params) => (
@@ -167,7 +151,7 @@ export const Form = () => {
               InputProps={{ disableUnderline: true }}
               id="select"
               label="Кол-во гостей"
-              value={infoForm.guest}
+              value={values.guest}
               onChange={handleGuestChange}
               select
             >
@@ -195,7 +179,6 @@ export const Form = () => {
             Найти
           </Button>
         </Box>
-        <FormResponse info={info}></FormResponse>
       </ThemeProvider>
     </>
   );

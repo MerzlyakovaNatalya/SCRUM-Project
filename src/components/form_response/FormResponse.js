@@ -51,8 +51,8 @@ export const FormResponse = (props) => {
       });
   }, [info]);
 
-  console.log(info);
-  console.log(othels);
+  // console.log(info);
+  // console.log(othels);
 
   return (
     <div className={style.wrap}>

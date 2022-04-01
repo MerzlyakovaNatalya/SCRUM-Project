@@ -12,39 +12,41 @@ export const Layout = () => {
     <>
       <div className={style.wrap}>
         <section className={style.section}>
-          <img src={img} alt="brend" />
-          <div className={style.wrapper}>
-            <Button
-              component={Link}
-              to="/"
-              color="secondary"
-              sx={{
-                fontSize: 16,
-                fontWeight: "bold",
-                minWidth: 100,
-                backgroundColor: "#e7f1f1",
-                opacity: 0.6,
-                marginRight: 15,
-                borderRadius: 10,
-              }}
-            >
-              Главная
-            </Button>
-            <Button
-              href="#"
-              color="secondary"
-              sx={{
-                fontSize: 16,
-                fontWeight: "bold",
-                minWidth: 200,
-                backgroundColor: "#e7f1f1",
-                opacity: 0.6,
-                marginRight: 15,
-                borderRadius: 10,
-              }}
-            >
-              Регистрация
-            </Button>
+          <div className={style.box}>
+            <img className={style.img} src={img} alt="brend" />
+            <div className={style.wrapper}>
+              <Button
+                component={Link}
+                to="/"
+                color="secondary"
+                sx={{
+                  fontSize: 16,
+                  fontWeight: "bold",
+                  minWidth: 100,
+                  backgroundColor: "#e7f1f1",
+                  opacity: 0.6,
+                  marginRight: 15,
+                  borderRadius: 10,
+                }}
+              >
+                Главная
+              </Button>
+              <Button
+                href="#"
+                color="secondary"
+                sx={{
+                  fontSize: 16,
+                  fontWeight: "bold",
+                  minWidth: 200,
+                  backgroundColor: "#e7f1f1",
+                  opacity: 0.6,
+                  marginRight: 15,
+                  borderRadius: 10,
+                }}
+              >
+                Регистрация
+              </Button>
+            </div>
           </div>
           <Outlet></Outlet>
           <Footer></Footer>
