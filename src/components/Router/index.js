@@ -5,6 +5,7 @@ import { Header } from "../header/Header";
 import { HotelDirectory } from "../hotel_directory/HotelDirectory";
 import { Layout } from "../layout/Layout";
 import { Main } from "../main/Main";
+import { Hotels } from "../pageHotels";
 import { PrivateOffice } from "../private_office/PrivateOffice";
 
 export const Router = () => (
@@ -17,6 +18,7 @@ export const Router = () => (
         <Route path="hotelDirectory" element={<HotelDirectory />} />
         <Route path="cityDirectory" element={<CityDirectory />} />
         <Route path="private" element={<PrivateOffice />} />
+        <Route path="hotels" element={<Hotels />} />
       </Route>
       <Route path="*" element={"NotFound"} />
     </Routes>

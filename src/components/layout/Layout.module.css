@@ -1,6 +1,7 @@
 .wrap {
   max-width: 1920px;
   width: 100%;
+  /* margin: 0 auto; */
   /* height: 1050px; */
 }
 
@@ -11,7 +12,6 @@
   background-position: center;
   position: relative;
 }
-
 
 .wrapper {
   position: absolute;

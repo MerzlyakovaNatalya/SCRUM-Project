@@ -33,7 +33,7 @@ export const Main = () => {
         </ul>
         <div>
           <div className={style.wrapl_ink}>
-            <Link to="cityDirectory" className={style.link}>
+            <Link to="layout/cityDirectory" className={style.link}>
               Посмотреть другие города
             </Link>
           </div>
@@ -55,7 +55,7 @@ export const Main = () => {
             </li>
           </ul>
           <div className={style.wrapl_ink}>
-            <Link to="hotelDirectory" className={style.link}>
+            <Link to="layout/hotelDirectory" className={style.link}>
               Посмотреть ещё варианты
             </Link>
           </div>

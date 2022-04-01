@@ -31,6 +31,15 @@ export const Header = () => {
             >
               Личный кабинет
             </Button>
+            <Button
+              component={Link}
+              variant="contained"
+              to="layout/hotels"
+              color="secondary"
+              sx={{ borderRadius: 3, marginRight: 15, bgcolor: "#b91bf8" }}
+            >
+              Отели
+            </Button>
             {/*<Button
               component={Link}
               variant="contained"
@@ -49,7 +58,9 @@ export const Header = () => {
               Регистрация
             </Button>*/}
           </div>
-          <Form onSubmit={handleSubmit} />
+          <div className={style.formMain}>
+            <Form onSubmit={handleSubmit} />
+          </div>
           <div className={style.wrp}>
             <p className={style.text}>
               Чтобы изменить мир, надо его увидеть...{" "}

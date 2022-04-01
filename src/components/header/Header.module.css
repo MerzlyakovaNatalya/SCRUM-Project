@@ -67,6 +67,10 @@
   justify-content: flex-end;
 }
 
+.formMain {
+  margin: 200px 350px;
+}
+
 /* @media (max-width: 1000px) {
   .wrapper {
     position: absolute;
