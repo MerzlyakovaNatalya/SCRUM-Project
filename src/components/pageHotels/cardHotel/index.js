@@ -22,7 +22,7 @@ export const CardHotel = ({ hotel }) => {
           <p className="card-wrp__address">{hotel.desc["Адрес"]}</p>
           <Button
             color="secondary"
-            sx={{ width: 200, borderRadius: 3, bgcolor: "background.purple" }}
+            sx={{ width: 200, height: 61, marginTop: 10, borderRadius: 3, bgcolor: "background.purple" }}
             size="large"
             variant="contained"
             className="card-wrp__btn"
