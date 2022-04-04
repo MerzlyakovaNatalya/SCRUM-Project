@@ -77,6 +77,7 @@ export const Form = ({ onSubmit }) => {
           sx={{
             bgcolor: "rgba(255, 255, 255, 0.2)",
             p: 5,
+            borderRadius: 3,
           }}
         >
           <TextField

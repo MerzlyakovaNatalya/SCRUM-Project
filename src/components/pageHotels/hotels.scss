@@ -1,7 +1,6 @@
 .container-results {
   width: 100%;
   min-height: 1000px;
-  border: 1px solid #000;
   display: flex;
 }
 
@@ -15,7 +14,7 @@
   width: 80%;
   padding: 10px;
   box-sizing: border-box;
-  background-color: orange;
+  background-color: rgb(223, 215, 224);
   display: flex;
   flex-direction: column;
 }
