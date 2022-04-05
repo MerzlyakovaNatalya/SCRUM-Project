@@ -46,6 +46,15 @@ export const Layout = () => {
               >
                 Регистрация
               </Button>
+              <Button
+                component={Link}
+                variant="contained"
+                to="private"
+                color="secondary"
+                sx={{ borderRadius: 3, marginRight: 15 }}
+              >
+                Личный кабинет
+              </Button>
             </div>
           </div>
           <Outlet></Outlet>

@@ -1,0 +1,24 @@
+.wrap {
+    height: 150px;
+    box-shadow:
+    0 1px 4px rgba(0, 0, 0, .3),
+    -23px 0 20px -23px rgba(0, 0, 0, .8),
+    23px 0 20px -23px rgba(0, 0, 0, .8),
+    0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.apartment {
+    margin: 30px;
+    width: 20%;
+}
+
+.text {
+    padding-top: 100px;
+    padding-left: 10px;
+}

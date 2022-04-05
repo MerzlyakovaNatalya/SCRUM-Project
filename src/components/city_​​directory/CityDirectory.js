@@ -1,7 +1,13 @@
+import style from "./CityDirectory.module.css";
+
 export const CityDirectory = () => {
   return (
     <>
-      <p>Представлены города, в которых есть отели</p>
+      <div className={style.wrap}>
+        <p className={style.text}>
+          Здесь представлены все города России, в которых есть аппартаменты
+        </p>
+      </div>
     </>
   );
 };
