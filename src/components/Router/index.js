@@ -7,6 +7,7 @@ import { Layout } from "../layout/Layout";
 import { Main } from "../main/Main";
 import { Hotels } from "../pageHotels";
 import { PrivateOffice } from "../private_office/PrivateOffice";
+import { ApartmentDirectory } from "../apartment_directory/ApartmentDirectory";
 
 export const Router = () => (
   <BrowserRouter>
@@ -15,6 +16,7 @@ export const Router = () => (
       <Route path="layout" element={<Layout />}>
         <Route index element={<Main />} />
         <Route path="feedback" element={<Feedback />} />
+        <Route path="apartmentDirectory" element={<ApartmentDirectory />} />
         <Route path="hotelDirectory" element={<HotelDirectory />} />
         <Route path="cityDirectory" element={<CityDirectory />} />
         <Route path="private" element={<PrivateOffice />} />

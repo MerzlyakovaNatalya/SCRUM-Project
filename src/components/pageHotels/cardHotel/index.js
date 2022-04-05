@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import "./cardHotel.scss";
+import { Link } from "react-router-dom";
 
 export const CardHotel = ({ hotel }) => {
   return (
@@ -21,8 +22,16 @@ export const CardHotel = ({ hotel }) => {
           </h2>
           <p className="card-wrp__address">{hotel.desc["Адрес"]}</p>
           <Button
+            component={Link}
+            to="feedback"
             color="secondary"
-            sx={{ width: 200, height: 61, marginTop: 10, borderRadius: 3, bgcolor: "background.purple" }}
+            sx={{
+              width: 200,
+              height: 61,
+              marginTop: 10,
+              borderRadius: 3,
+              bgcolor: "background.purple",
+            }}
             size="large"
             variant="contained"
             className="card-wrp__btn"
