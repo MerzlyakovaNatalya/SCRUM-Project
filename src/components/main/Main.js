@@ -9,8 +9,30 @@ import { Hotel_2 } from "../hotel/Hotel_2";
 import { Hotel_3 } from "../hotel/Hotel_3";
 import { Hotel_4 } from "../hotel/Hotel_4";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getForm } from "../../store/form/actions";
 
 export const Main = () => {
+
+  const initialState = {
+    city: "Москва",
+    checkIn: new Date(),
+    checkOut: new Date(),
+    guest: "1",
+  };
+
+  const [values, setValues] = useState(initialState);
+  const dispatch = useDispatch();
+
+  const onSubmit = (date) => {
+    dispatch(getForm(date));
+  };
+
+  const handleClick = () => {
+    onSubmit(values);
+  };
+
   return (
     <>
       <div className={style.main}>
@@ -19,7 +41,9 @@ export const Main = () => {
         </h1>
         <ul className={style.wrap}>
           <li>
+            <Link to="apartmentMoscow" onClick={handleClick}>
             <Moscow></Moscow>
+            </Link>
           </li>
           <li>
             <Peter></Peter>

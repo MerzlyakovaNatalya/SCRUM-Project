@@ -8,6 +8,7 @@ import { Main } from "../main/Main";
 import { Hotels } from "../pageHotels";
 import { PrivateOffice } from "../private_office/PrivateOffice";
 import { ApartmentDirectory } from "../apartment_directory/ApartmentDirectory";
+import { ApartmentsMoscow } from "../apartments_Moscow/ApartmentsMoscow";
 
 export const Router = () => (
   <BrowserRouter>
@@ -19,6 +20,7 @@ export const Router = () => (
         <Route path="apartmentDirectory" element={<ApartmentDirectory />} />
         <Route path="hotelDirectory" element={<HotelDirectory />} />
         <Route path="cityDirectory" element={<CityDirectory />} />
+        <Route path="apartmentMoscow" element={<ApartmentsMoscow />} />
         <Route path="private" element={<PrivateOffice />} />
         <Route path="hotels" element={<Hotels />} />
       </Route>
