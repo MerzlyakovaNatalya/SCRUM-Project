@@ -8,7 +8,7 @@ export const Crimea = () => {
     <>
     <div className={style.wrap}>
       <img src={img} alt="Moscow" />
-      <h3>Крым</h3>
+      <h3>Крымский полуостров</h3>
       <p className={style.description}>Варианты размещения {number}</p>
     </div>
     </>

@@ -1,6 +1,5 @@
 .wrap {
     width: 85%;
-    height: 500px;
     margin: 0 auto;
     box-shadow:
     0 1px 4px rgba(0, 0, 0, .3),
@@ -12,4 +11,21 @@
 
 .text {
     padding-left: 30px;
+}
+
+.city_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+.city_item {
+    list-style-type: none;
+    margin: 10px;
+    box-shadow:
+    0 1px 4px rgba(0, 0, 0, .3),
+    -23px 0 20px -23px rgba(0, 0, 0, .8),
+    23px 0 20px -23px rgba(0, 0, 0, .8),
+    0 0 40px rgba(0, 0, 0, .1) inset;
+    padding: 6px;
 }
