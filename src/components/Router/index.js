@@ -9,6 +9,8 @@ import { Hotels } from "../pageHotels";
 import { PrivateOffice } from "../private_office/PrivateOffice";
 import { ApartmentDirectory } from "../apartment_directory/ApartmentDirectory";
 import { ApartmentsMoscow } from "../apartments_Moscow/ApartmentsMoscow";
+import { Register } from "../Register/Register";
+import { Login } from "../Login/Login";
 
 export const Router = () => (
   <BrowserRouter>
@@ -16,6 +18,8 @@ export const Router = () => (
       <Route path="/" element={<Header />} />
       <Route path="layout" element={<Layout />}>
         <Route index element={<Main />} />
+        <Route path="register" element={<Register />} />
+        <Route path="login" element={<Login />} />
         <Route path="feedback" element={<Feedback />} />
         <Route path="apartmentDirectory" element={<ApartmentDirectory />} />
         <Route path="hotelDirectory" element={<HotelDirectory />} />

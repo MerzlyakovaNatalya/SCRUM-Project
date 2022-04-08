@@ -22,6 +22,40 @@ export const Header = () => {
         <section className={style.section}>
           <img className={style.logo} src={img} alt="brend" />
           <div className={style.wrapper}>
+          <Button
+                component={Link}
+                to="layout/register"
+                href="#"
+                color="secondary"
+                sx={{
+                  fontSize: 16,
+                  fontWeight: "bold",
+                  minWidth: 150,
+                  backgroundColor: "#fbf9fc",
+                  opacity: 0.8,
+                  marginRight: 1,
+                  borderRadius: 2,
+                }}
+              >
+                Регистрация
+              </Button>
+              <Button
+                component={Link}
+                to="layout/login"
+                href="#"
+                color="secondary"
+                sx={{
+                  fontSize: 16,
+                  fontWeight: "bold",
+                  minWidth: 150,
+                  backgroundColor: "#fbf9fc",
+                  opacity: 0.8,
+                  marginRight: 15,
+                  borderRadius: 2,
+                }}
+              >
+                Войти
+              </Button>
             <Button
               component={Link}
               variant="contained"
