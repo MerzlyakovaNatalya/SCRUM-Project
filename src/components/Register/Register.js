@@ -21,28 +21,47 @@ const theme = createTheme();
 export function Register() {
 	const navigate = useNavigate();
 
-	const [name, setName] = useState('')
+	const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 
 	async function registerUser(event) {
-		event.preventDefault()
+		
+    event.preventDefault()
+
+    const first_name = firstName;
+    const last_name = lastName;
+    const birthday = "1968-09-25";
+
+    const test = JSON.stringify({
+      first_name: first_name,
+      last_name: last_name,
+      email: email,
+      password: password,
+      birthday: birthday,
+    });
+    console.log(test)
 
 		const response = await fetch('http://46.17.248.74:58235/api/user/create', {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				name,
-				email,
-				password,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+				first_name: first_name,
+        last_name: last_name,
+				email: email,
+				password: password,
+        birthday: birthday,
 			}),
 		})
 
 		const data = await response.json()
 
 		if (data.status === 'ok') {
+      console.log("Ответ пришёл");
+      console.log(data);
 			navigate("/login")
 		}
 	}
@@ -88,13 +107,26 @@ export function Register() {
                 margin="normal"
                 required
                 fullWidth
-                id="name"
-                label="Name"
-                name="name"
+                id="firstName"
+                label="Имя"
+                name="firstName"
                 autoComplete="name"
                 autoFocus
-				value={name}
-				onChange={(e) => setName(e.target.value)}
+				value={firstName}
+				onChange={(e) => setFirstName(e.target.value)}
+
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="lastName"
+                label="Фамилия"
+                name="lastName"
+                autoComplete="name"
+                autoFocus
+				value={lastName}
+				onChange={(e) => setLastName(e.target.value)}
 
               />
               <TextField
@@ -115,7 +147,7 @@ export function Register() {
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label="Пароль"
                 type="password"
                 id="password"
                 autoComplete="current-password"
@@ -145,4 +177,6 @@ export function Register() {
 		</div>
 	)
 }
+
+
 
