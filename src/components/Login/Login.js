@@ -39,10 +39,10 @@ export function Login() {
 
 		const data = await response.json()
 
-		if (data.user) {
-			localStorage.setItem('token', data.user)
+		if (data.name) {
+			localStorage.setItem('token', data.name)
 			alert('Авторизация успешна')
-			window.location.href = '/dashboard'
+			window.location.href = '/layout'
 			console.log({
 				email: data.get('email'),
 				password: data.get('password'),
