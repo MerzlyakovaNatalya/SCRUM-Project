@@ -34,27 +34,29 @@ export function Register() {
     const last_name = lastName;
     const birthday = "1968-09-25";
 
-    const test = JSON.stringify({
+    const requestOptions = JSON.stringify({
       first_name: first_name,
       last_name: last_name,
       email: email,
       password: password,
       birthday: birthday,
     });
-    console.log(test)
+    console.log(requestOptions)
 
-		const response = await fetch('http://46.17.248.74:58235/api/user/create', {
+		/*const response = await fetch('http://46.17.248.74:58235/api/user/create', {
 			method: 'POST',
 			headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-				first_name: first_name,
-        last_name: last_name,
-				email: email,
-				password: password,
-        birthday: birthday,
-			}),
+      body: requestOptions,
+		})*/
+
+    const response = await fetch('http://46.17.248.74:58235/api/user/create', {
+			method: 'POST',
+			headers: {
+        'Content-Type': 'application/json',
+      },
+      body: requestOptions,
 		})
 
 		const data = await response.json()

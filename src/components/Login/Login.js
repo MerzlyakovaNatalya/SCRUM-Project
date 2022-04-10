@@ -26,7 +26,7 @@ export function Login() {
 	async function loginUser(event) {
 		event.preventDefault()
 
-		const response = await fetch('http://localhost:1337/api/login', {
+		const response = await fetch('http://46.17.248.74:58235/api/user/login', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -41,14 +41,14 @@ export function Login() {
 
 		if (data.user) {
 			localStorage.setItem('token', data.user)
-			alert('Login successful')
+			alert('Авторизация успешна')
 			window.location.href = '/dashboard'
 			console.log({
 				email: data.get('email'),
 				password: data.get('password'),
 			  });
 		} else {
-			alert('Please check your username and password')
+			alert('проверьте ваше имя пользователя и пароль')
 		}
 	}
 
