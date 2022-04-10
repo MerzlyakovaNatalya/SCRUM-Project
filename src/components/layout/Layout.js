@@ -32,6 +32,8 @@ export const Layout = () => {
                 Главная
               </Button>
               <Button
+              component={Link}
+              to="register"
                 href="#"
                 color="secondary"
                 sx={{
@@ -45,6 +47,23 @@ export const Layout = () => {
                 }}
               >
                 Регистрация
+              </Button>
+              <Button
+                component={Link}
+                to="login"
+                href="#"
+                color="secondary"
+                sx={{
+                  fontSize: 16,
+                  fontWeight: "bold",
+                  minWidth: 150,
+                  backgroundColor: "#fbf9fc",
+                  opacity: 0.8,
+                  marginRight: 15,
+                  borderRadius: 2,
+                }}
+              >
+                Войти
               </Button>
               <Button
                 component={Link}
