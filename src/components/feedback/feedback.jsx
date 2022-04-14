@@ -1,7 +1,10 @@
 import React from 'react';
 import style from "./feedback.module.css";
+import { useSelector } from "react-redux";
 
 export const Feedback = () => {
+
+    const hotels = useSelector((state) => state.hotels);
 
     let feedback =  [
                  {id: 1, name: 'Павел', messageText: 'Adipisicing exercitation cupidatat adipisicing deserunt enim aute non dolor pariatur qui ad.', location: {city: 'Москва', country: 'Россия'} },
@@ -29,8 +32,16 @@ export const Feedback = () => {
         )
     })
     
+    console.log(hotels);
     return (
+        <>
+         {hotels.map((item) => (
+            <div className="hotel-item" key={item.id}>
+              <p>{item.name}</p>
+            </div>
+          ))}
         <div>{feedPosts}</div>
+        </>
     )
     
     };

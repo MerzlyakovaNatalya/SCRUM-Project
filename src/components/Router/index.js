@@ -20,11 +20,12 @@ export const Router = () => (
         <Route index element={<Main />} />
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
-        <Route path="feedback" element={<Feedback />} />
         <Route path="apartmentDirectory" element={<ApartmentDirectory />} />
         <Route path="hotelDirectory" element={<HotelDirectory />} />
         <Route path="cityDirectory" element={<CityDirectory />} />
-        <Route path="apartmentMoscow" element={<ApartmentsMoscow />} />
+        <Route path="apartmentMoscow" element={<ApartmentsMoscow />}>
+          <Route path="feedback" element={<Feedback />} />
+        </Route>
         <Route path="private" element={<PrivateOffice />} />
         <Route path="hotels" element={<Hotels />} />
       </Route>
