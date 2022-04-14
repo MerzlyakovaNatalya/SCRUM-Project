@@ -23,11 +23,11 @@ export const Router = () => (
         <Route path="apartmentDirectory" element={<ApartmentDirectory />} />
         <Route path="hotelDirectory" element={<HotelDirectory />} />
         <Route path="cityDirectory" element={<CityDirectory />} />
-        <Route path="apartmentMoscow" element={<ApartmentsMoscow />}>
-          <Route path="feedback" element={<Feedback />} />
-        </Route>
+        <Route path="apartmentMoscow" element={<ApartmentsMoscow />}/>
+        <Route path="apartmentMoscow/:id" element={<Feedback />}/>
         <Route path="private" element={<PrivateOffice />} />
         <Route path="hotels" element={<Hotels />} />
+        <Route path="hotels/:id" element={<Feedback />}/>
       </Route>
       <Route path="*" element={"NotFound"} />
     </Routes>
