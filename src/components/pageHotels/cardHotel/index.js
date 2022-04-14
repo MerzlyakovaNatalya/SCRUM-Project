@@ -21,9 +21,10 @@ export const CardHotel = ({ hotel }) => {
               : "(нет звёзд)"}
           </h2>
           <p className="card-wrp__address">{hotel.desc["Адрес"]}</p>
+          <p className="card-wrp__address">{hotel.id}</p>
           <Button
             component={Link}
-            to="feedback"
+            to={`${hotel.id}`}
             color="secondary"
             sx={{
               width: 200,

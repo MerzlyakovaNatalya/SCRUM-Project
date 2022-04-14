@@ -1,10 +1,13 @@
 import React from 'react';
 import style from "./feedback.module.css";
 import { useSelector } from "react-redux";
+import { useParams } from 'react-router-dom';
 
 export const Feedback = () => {
 
     const hotels = useSelector((state) => state.hotels);
+    const hotelId = useParams();
+    console.log(hotelId);
 
     let feedback =  [
                  {id: 1, name: 'Павел', messageText: 'Adipisicing exercitation cupidatat adipisicing deserunt enim aute non dolor pariatur qui ad.', location: {city: 'Москва', country: 'Россия'} },
@@ -33,14 +36,20 @@ export const Feedback = () => {
     })
     
     console.log(hotels);
+
+    const newHotel = hotels.find((item) => hotelId.id == item.id);
+    console.log("это newHotel");
+    console.log(newHotel);
+
     return (
         <>
-         {hotels.map((item) => (
-            <div className="hotel-item" key={item.id}>
-              <p>{item.name}</p>
-            </div>
-          ))}
+        <div className={style.wrap}>
+        <h1>{newHotel.name}</h1>
+        <img src='newHotel.images[0]'/>
+         <p>{newHotel.address}</p>
+         <h2 className={style.reviews}>Отзывы</h2>
         <div>{feedPosts}</div>
+        </div>
         </>
     )
     
