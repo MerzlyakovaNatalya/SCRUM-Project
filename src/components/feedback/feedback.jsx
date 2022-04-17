@@ -44,8 +44,26 @@ export const Feedback = () => {
     return (
         <>
         <div className={style.wrap}>
-        <h1>{newHotel.name}</h1>
-        <img src='newHotel.images[0]'/>
+        <h1 className={style.name}>{newHotel.name}</h1>
+        <img className={style.hotel_big_img} src={newHotel.images[1]} alt="hotel"/>
+        <h3>{newHotel.desc.Расположение}</h3>
+        {/* {
+            newHotel.images.map((img) => {
+                return (
+                <div>
+                    <img src={img} alt="" />
+                </div>)
+                
+            })
+        } */}
+        <h4>Номера</h4>
+        {
+            newHotel.rooms.map((item)=> {
+                return (
+                    <p>{item.name}</p>
+                )
+            })
+        }
          <p>{newHotel.address}</p>
          <h2 className={style.reviews}>Отзывы</h2>
         <div>{feedPosts}</div>

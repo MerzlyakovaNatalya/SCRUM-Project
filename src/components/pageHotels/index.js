@@ -28,6 +28,7 @@ export const Hotels = () => {
           setNotHotels(false);
           getInfoFromApi(HotelDesc(city.id))
             .then((data) => {
+              console.log("dgfgfgfg", data);
               if (data.length === 0) {
                 setNotHotels(true);
               } else {
