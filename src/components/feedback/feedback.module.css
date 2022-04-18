@@ -22,8 +22,22 @@
     23px 0 20px -23px rgba(0, 0, 0, .8),
     0 0 40px rgba(0, 0, 0, .1) inset;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    margin: 30px
 }
 
 .reviews {
     margin-top: 30px;
+}
+
+.hotel_big_img {
+    width: 70%;
+    margin: 0  0 20px  0;
+
 }
