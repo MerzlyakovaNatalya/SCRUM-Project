@@ -6,6 +6,7 @@ import { getInfoAboutHotels } from "../../store/pageHotels/actions";
 import { GeoCity, getInfoFromApi, HotelDesc } from "../../utils/constants";
 import { Form } from "../Form";
 import { CardHotel } from "./cardHotel";
+import { getCityId } from "../../store/city_id/actions"
 import "./hotels.scss";
 
 export const Hotels = () => {
@@ -21,14 +22,13 @@ export const Hotels = () => {
     getInfoFromApi(GeoCity())
       .then((data) => {
         const city = data.find((item) => item.name === infoForm.city);
-        console.log(city);
         if (city === undefined) {
           setNotHotels(true);
         } else {
           setNotHotels(false);
+          dispatch(getCityId(city.id))
           getInfoFromApi(HotelDesc(city.id))
             .then((data) => {
-              console.log("dgfgfgfg", data);
               if (data.length === 0) {
                 setNotHotels(true);
               } else {
@@ -48,7 +48,6 @@ export const Hotels = () => {
         setLoading(false);
       });
   };
-
   const handleSubmit = (data) => {
     dispatch(getForm(data));
     dispatch(getInfoAboutHotels([]));

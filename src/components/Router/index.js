@@ -11,6 +11,7 @@ import { ApartmentDirectory } from "../apartment_directory/ApartmentDirectory";
 import { ApartmentsMoscow } from "../apartments_Moscow/ApartmentsMoscow";
 import { Register } from "../Register/Register";
 import { Login } from "../Login/Login";
+import { HotelPrice } from "../hotel_price/HotelPrice"
 
 export const Router = () => (
   <BrowserRouter>
@@ -27,7 +28,7 @@ export const Router = () => (
         <Route path="apartmentMoscow/:id" element={<Feedback />}/>
         <Route path="private" element={<PrivateOffice />} />
         <Route path="hotels" element={<Hotels />} />
-        <Route path="hotels/:id" element={<Feedback />}/>
+        <Route path="hotels/:id/*" element={<Feedback />} />
       </Route>
       <Route path="*" element={"NotFound"} />
     </Routes>

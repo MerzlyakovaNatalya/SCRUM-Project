@@ -10,6 +10,7 @@ import { Form } from "../Form";
 import { CardHotel } from "../pageHotels/cardHotel";
 import "../pageHotels/hotels.scss";
 import { Outlet } from "react-router-dom";
+import { getCityId } from "../../store/city_id/actions";
 
 export const ApartmentsMoscow = () => {
   const hotels = useSelector((state) => state.hotels);
@@ -25,6 +26,7 @@ export const ApartmentsMoscow = () => {
       .then((data) => {
         const city = data.find((item) => item.name === infoForm.city);
         console.log(city);
+        dispatch(getCityId(city.id))
         if (city === undefined) {
           setNotHotels(true);
         } else {

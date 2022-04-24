@@ -14,14 +14,26 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Image from '../../images/Krasivaya-priroda.jpg';
+import { useDispatch } from 'react-redux';
+import { getUser } from '../../store/users/action'
+import { useNavigate, useLocation } from 'react-router-dom';
 
 
 const theme = createTheme();
 
 
 export function Login() {
-	const [email, setEmail] = useState('')
-	const [password, setPassword] = useState('')
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const fromPage = location.state?.from?.pathname || '/';
+
+  const back = () => {
+   navigate(-1);
+  }
 
 	async function loginUser(event) {
 		event.preventDefault()
@@ -42,24 +54,16 @@ export function Login() {
 		if (data.name) {
 			localStorage.setItem('token', data.name)
 			alert('Авторизация успешна')
-			window.location.href = '/layout'
-			console.log({
-				email: data.get('email'),
-				password: data.get('password'),
-			  });
+      dispatch(getUser(data.token))
+			{/*window.location.href = '/layout'*/}
 		} else {
 			alert('проверьте ваше имя пользователя и пароль')
 		}
 	}
 
-
-
-
-
-
-
 	return (
 		<div>
+      {fromPage}
 
 	<ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: '100vh' }}>
@@ -146,6 +150,14 @@ export function Login() {
                 </Grid>
               </Grid>
             </Box>
+          <Grid item
+            sx={{
+              m: "2rem",
+            }}>
+                  <Link href="#" variant="body2" onClick={back}>
+                    {"Вернуться назад"}
+                  </Link>
+          </Grid>
           </Box>
         </Grid>
       </Grid>
