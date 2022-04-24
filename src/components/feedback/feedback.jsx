@@ -1,13 +1,17 @@
 import React from 'react';
 import style from "./feedback.module.css";
 import { useSelector } from "react-redux";
-import { useParams } from 'react-router-dom';
+import { useParams, Link, Outlet } from 'react-router-dom';
+import Button from "@mui/material/Button";
+import { Route, Routes } from "react-router-dom";
+import { HotelPrice } from "../hotel_price/HotelPrice";
 
 export const Feedback = () => {
 
     const hotels = useSelector((state) => state.hotels);
     const hotelId = useParams();
-    console.log(hotelId);
+    const token = useSelector((state) => state.users);
+
 
     let feedback =  [
                  {id: 1, name: 'Павел', messageText: 'Adipisicing exercitation cupidatat adipisicing deserunt enim aute non dolor pariatur qui ad.', location: {city: 'Москва', country: 'Россия'} },
@@ -34,12 +38,8 @@ export const Feedback = () => {
             </div>
         )
     })
-    
-    console.log(hotels);
 
     const newHotel = hotels.find((item) => hotelId.id == item.id);
-    console.log("это newHotel");
-    console.log(newHotel);
 
     return (
         <>
@@ -58,13 +58,33 @@ export const Feedback = () => {
         } */}
         <h4>Номера</h4>
         {
-            newHotel.rooms.map((item)=> {
+            newHotel.rooms.map((item,index)=> {
                 return (
-                    <p>{item.name}</p>
+                    <p key={index}>{item.name}</p>
                 )
             })
         }
          <p>{newHotel.address}</p>
+         <Button
+                component={Link}
+                to='price'
+                href="#"
+                color="secondary"
+                sx={{
+                  fontSize: 16,
+                  fontWeight: "bold",
+                  minWidth: 150,
+                  boxShadow: 3,
+                  marginRight: 1,
+                  borderRadius: 2,
+                  marginTop: 2,
+                }}
+              >
+                Посмотреть цены
+              </Button>
+              <Routes>
+                  <Route path="price/*" element={<HotelPrice hotelId={hotelId} />}/>
+              </Routes>
          <h2 className={style.reviews}>Отзывы</h2>
         <div>{feedPosts}</div>
         </div>

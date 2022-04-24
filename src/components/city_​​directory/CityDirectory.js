@@ -7,12 +7,14 @@ import { getInfoAboutHotels } from "../../store/pageHotels/actions";
 import { GeoCity, getInfoFromApi, HotelDesc } from "../../utils/constants";
 import { Form } from "../Form";
 import { CardHotel } from "../pageHotels/cardHotel";
+import { getCityId } from "../../store/city_id/actions"
 import "../pageHotels/hotels.scss";
 
 export const CityDirectory = () => {
 
   const [loading, setLoading] = useState(false);
   const [citys, setCitys] = useState([]);
+  const dispatch = useDispatch();
 
   const getHotels = () => {
     
@@ -21,6 +23,7 @@ export const CityDirectory = () => {
     .then((data) => {
       const city = data;
       setCitys(city);
+      dispatch(getCityId(city.id))
       setLoading(false);
     })
     .catch((err) => console.log(err))

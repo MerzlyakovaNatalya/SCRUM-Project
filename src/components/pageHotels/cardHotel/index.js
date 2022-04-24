@@ -7,6 +7,7 @@ export const CardHotel = ({ hotel }) => {
     <>
       <div className="card-wrp">
         <div className="card-wrp__image">
+          <p>{hotel.id}</p>
           <img
             src={hotel.images[0]}
             alt="image"

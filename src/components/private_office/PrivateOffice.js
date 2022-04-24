@@ -1,4 +1,5 @@
 import style from "./PrivateOffice.module.css";
+import { Outlet } from "react-router-dom";
 
 export const PrivateOffice = () => {
   return (
