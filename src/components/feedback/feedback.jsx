@@ -5,6 +5,7 @@ import { useParams, Link, Outlet } from 'react-router-dom';
 import Button from "@mui/material/Button";
 import { Route, Routes } from "react-router-dom";
 import { HotelPrice } from "../hotel_price/HotelPrice";
+import {Slider} from './Slider/Slider'
 
 export const Feedback = () => {
 
@@ -45,7 +46,8 @@ export const Feedback = () => {
         <>
         <div className={style.wrap}>
         <h1 className={style.name}>{newHotel.name}</h1>
-        <img className={style.hotel_big_img} src={newHotel.images[1]} alt="hotel"/>
+        <div><Slider newHotel={newHotel}/></div>
+        {/* <img className={style.hotel_big_img} src={newHotel.images[1]} alt="hotel"/> */}
         <h3>{newHotel.desc.Расположение}</h3>
         {/* {
             newHotel.images.map((img) => {
