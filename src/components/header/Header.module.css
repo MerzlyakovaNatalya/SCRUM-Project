@@ -12,7 +12,7 @@
   background-position: center;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 0 0 200px 0;
   box-sizing: border-box;
@@ -22,6 +22,12 @@
 .logo {
   max-width: 500px;
   width: 50%;
+  text-align: end;
+}
+
+.logoMobil {
+  width: 250px;
+  padding-top: 40px;
 }
 
 .text {
@@ -56,6 +62,7 @@
   left: 60%; */
   width: 50%;
   text-align: right;
+  margin-top: 30px;
 }
 
 .wrp {

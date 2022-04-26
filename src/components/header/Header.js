@@ -8,6 +8,7 @@ import { useState } from "react";
 import { CopyLayout } from "../copyLayout/CopyLayout";
 import { useDispatch, useSelector } from "react-redux";
 import { getForm } from "../../store/form/actions";
+import imgMobil from "../../images/mobilV.png"
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -82,6 +83,7 @@ export const Header = () => {
             >
               Регистрация
             </Button>*/}
+            <img className={style.logoMobil} src={imgMobil} alt="brend" />
           </div>
           <div className={style.formMain}>
             <Form onSubmit={handleSubmit} />
