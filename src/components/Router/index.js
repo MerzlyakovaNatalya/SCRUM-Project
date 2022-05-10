@@ -11,7 +11,9 @@ import { ApartmentDirectory } from "../apartment_directory/ApartmentDirectory";
 import { ApartmentsMoscow } from "../apartments_Moscow/ApartmentsMoscow";
 import { Register } from "../Register/Register";
 import { Login } from "../Login/Login";
-import { HotelPrice } from "../hotel_price/HotelPrice"
+import { HotelPrice } from "../hotel_price/HotelPrice";
+import { RequireAuth } from "../hoc/RequireAuth";
+import { Booking } from '../booking/Booking';
 
 export const Router = () => (
   <BrowserRouter>

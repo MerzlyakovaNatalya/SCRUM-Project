@@ -41,3 +41,13 @@ export const HotelDesc = (city_id) => ({
     city_id,
   },
 });
+
+export const HoteOffers = (city_id) => ({
+  method: "Hotel.Offers",
+  request: {
+    city_id: city_id,
+    date_begin: "2022-06-20",
+    date_end: "2022-06-27",
+    adult: 2,
+  },
+});
