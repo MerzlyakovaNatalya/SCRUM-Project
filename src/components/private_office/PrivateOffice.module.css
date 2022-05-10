@@ -20,8 +20,20 @@
     0 0 40px rgba(0, 0, 0, .1) inset;
 }
 
-.text {
+.title {
     margin-left: 115px;
     margin-bottom: 10px;
     margin-top: 50px;
+}
+
+.wrap_text {
+    padding-top: 20px;
+    margin-left: 15px;
+    color: #5f5984;
+}
+
+.text {
+    padding-top: 20px;
+    margin-left: 15px; 
+    color: #5f5984;
 }

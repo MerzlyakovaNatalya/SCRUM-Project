@@ -3,8 +3,13 @@
     margin-top: 10px;
 }
 
+.blok_offer {
+    width: 30%;
+    padding-bottom: 15px;
+}
+
 .h1name {
-        font-size: 23px;
+        font-size: 16px;
         font-weight: bold;
 }
 
@@ -23,21 +28,114 @@
     0 0 40px rgba(0, 0, 0, .1) inset;
     margin-bottom: 30px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    /*flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;*/
 }
 
 .name {
-    margin: 30px
+    margin: 30px;
+    flex-basis: 100%;
+    color: rgb(93, 51, 99);
 }
 
 .reviews {
     margin-top: 30px;
+    flex-basis: 100%;
+    padding-left: 25px;
+    color: #634767;
 }
 
 .hotel_big_img {
     width: 70%;
     margin: 0  0 20px  0;
 
+}
+
+.address {
+    flex-basis: 97%;
+    color: #634767;
+}
+
+.slider {
+    width: 40%;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.text {
+    flex-basis: 100%;
+    margin: 20px;
+    color: #634767;
+}
+
+.textH4 {
+    flex-basis: 100%; 
+    color: #b966ff;
+    flex-basis: 100%;
+    margin: 5px 2px 5px 10px;
+}
+
+.text_offer {
+    color: #a163c78a;
+}
+
+.meal_name {
+    color: #713b96;
+    font-weight: 600;
+}
+
+.wrap_rooms {
+    flex-basis: 100%;
+    margin: 10px;
+}
+
+.rooms {
+    border: 1px solid rgb(221, 219, 224);
+    padding: 20px 5px 20px 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title_room {
+    color: rgb(93, 51, 99);
+    padding-bottom: 15px;
+    padding-left: 0px;
+}
+.price {
+    color: rgb(93, 51, 99);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.meal {
+    font-size: 12px;
+}
+
+.wrap_offer {
+    display: flex;
+    justify-content: space-between;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #d5d5de71;
+}
+
+.wrap_offers {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #d5d5de;
+    padding-top: 10px;
+}
+
+.wrapper_feedPosts {
+    flex-basis: 100%;
+    margin: 10px; 
+    color: #634767;
 }

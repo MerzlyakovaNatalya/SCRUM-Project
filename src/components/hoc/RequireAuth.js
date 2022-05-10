@@ -8,6 +8,10 @@ const RequireAuth = ({children}) => {
     if (user.length < 1) {
         return <Navigate to='/layout/login' state={{from: location}} />
     }
+    {/*else {  
+        return <Navigate to='/layout/private' state={{from: location}} />
+        
+    } */}
 
     return children;
 }

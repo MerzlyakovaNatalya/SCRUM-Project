@@ -26,7 +26,7 @@ export const Layout = () => {
                   backgroundColor: "#e7f1f1",
                   opacity: 0.6,
                   marginRight: 15,
-                  borderRadius: 10,
+                  borderRadius: 2,
                 }}
               >
                 Главная
@@ -43,7 +43,7 @@ export const Layout = () => {
                   backgroundColor: "#e7f1f1",
                   opacity: 0.6,
                   marginRight: 15,
-                  borderRadius: 10,
+                  borderRadius: 2,
                 }}
               >
                 Регистрация

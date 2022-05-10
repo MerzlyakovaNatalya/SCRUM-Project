@@ -42,7 +42,7 @@ export const Slider = ({ newHotel }) => {
       {newHotel.images.map((img, idx) => {
         return (
           <div
-            className={imgIndex === idx + 1 ? style.active : style.slider__img}
+            className={imgIndex === idx + 1 ? style.active : style.slider__img} key={idx}
           >
             <img className={style.slider__img__new} src={img} alt="" />
           </div>
