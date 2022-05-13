@@ -5,6 +5,7 @@ import { userReducer } from "./users/reducer";
 import { hotelPricesReducer } from "./hotel_prices/reducer";
 import { cityIdReducer } from "./city_id/reducer";
 import { bookingReduser } from "./booked/reduser";
+import { profileDataReducer } from "./profileData/reducer";
 
 const rootReducer = combineReducers({
   form: formReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   hotel_price: hotelPricesReducer,
   city_id: cityIdReducer,
   booked: bookingReduser,
+  profile_data: profileDataReducer,
 });
 
 export const store = createStore(
