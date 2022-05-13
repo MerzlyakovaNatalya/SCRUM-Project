@@ -1,30 +1,31 @@
 import style from "./PrivateOffice.module.css";
 import { useSelector } from "react-redux";
 import { useMemo } from "react";
+import { ProfileData } from "./ProfileData";
 
 export const PrivateOffice = () => {
-
   const offerBooked = useSelector((state) => state.booked);
 
   const offer = useMemo(() => {
-    if(offerBooked.offer === 0) {
-     return false;
-    }else {
+    if (offerBooked.offer === 0) {
+      return false;
+    } else {
       return true;
     }
-  }, [])
+  }, []);
 
   return (
     <>
-    <div className={style.wrap_data}>
+      <div className={style.wrap_data}>
         <h3 className={style.title}>Мои данные</h3>
-        <div className={style.wrapper_data}></div>
+        <div className={style.wrapper_data}>
+          <ProfileData />
+        </div>
       </div>
       <div className={style.wrap}>
         <h3 className={style.title}>Мои брони</h3>
         <div className={style.wrapper}>
-        {
-          offer ? (
+          {offer ? (
             <div className={style.wrap_text}>
               <p>{offerBooked.room_name}</p>
               <p>Цена за проживание: {offerBooked.price} руб</p>
@@ -37,9 +38,8 @@ export const PrivateOffice = () => {
               <p>Ночи: {offerBooked.nights}</p>
             </div>
           ) : (
-              <p className={style.text}>Забронированных отелей нет</p>
-          )
-        }
+            <p className={style.text}>Забронированных отелей нет</p>
+          )}
         </div>
       </div>
     </>

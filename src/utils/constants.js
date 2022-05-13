@@ -51,3 +51,12 @@ export const HoteOffers = (city_id) => ({
     adult: 2,
   },
 });
+
+// export const profileDataApi = async (token) => {
+//   const info = await axios.get("http://46.17.248.74:58235/api/user/update", {
+//     headers: {
+//       Authorization: `Bearer ${token}`,
+//     },
+//   });
+//   // return info.data.response;
+// };
