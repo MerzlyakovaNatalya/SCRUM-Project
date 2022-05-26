@@ -1,0 +1,28 @@
+
+.wrap_pagination {
+    padding-bottom: 20px;
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
+.pag_item {
+    list-style-type: none;
+    padding: 5px;
+    border: 1px solid #d0b3f5;
+    margin: 3px;
+    width: 39px;
+}
+
+.page_link {
+    text-decoration: none;
+    display: block;
+}
+
+.page_link:visited {
+    text-decoration: none;
+    background-color: #fc0;
+}

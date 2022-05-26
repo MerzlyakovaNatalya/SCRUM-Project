@@ -39,7 +39,6 @@ export const Hotels = () => {
               } else {
                 setNotHotels(false);
                 dispatch(getInfoAboutHotels(data));
-                 
                 getInfoFromApi(HoteOffers(city.id))
                   .then((data) => {
                      if (data.length === 0) {

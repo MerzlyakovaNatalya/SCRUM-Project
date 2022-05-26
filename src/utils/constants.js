@@ -52,6 +52,13 @@ export const HoteOffers = (city_id) => ({
   },
 });
 
+export const HotelCount = (city_id) => ({
+  method: "Hotel.Count",
+  request: {
+    city_id,
+  },
+});
+
 // export const profileDataApi = async (token) => {
 //   const info = await axios.get("http://46.17.248.74:58235/api/user/update", {
 //     headers: {
