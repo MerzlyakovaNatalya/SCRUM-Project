@@ -11,14 +11,20 @@ import { CardHotel } from "../pageHotels/cardHotel";
 import "../pageHotels/hotels.scss";
 import { Outlet } from "react-router-dom";
 import { getCityId } from "../../store/city_id/actions";
+import { getHotelPrices } from "../../store/hotel_prices/actions";
+import { HoteOffers } from "../../utils/constants";
+
 
 export const ApartmentsMoscow = () => {
+
+  const [filteredHotels, setFilteredHotels] = useState([]);
   const hotels = useSelector((state) => state.hotels);
   const infoForm = useSelector((state) => state.form);
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
   const [notHotels, setNotHotels] = useState(false);
   const [open, setOpen] = useState(false);
+  const hotelOffers = useSelector((state) => state.hotel_price);
 
   const getHotels = () => {
     setLoading(true);
@@ -38,7 +44,16 @@ export const ApartmentsMoscow = () => {
               } else {
                 setNotHotels(false);
                 dispatch(getInfoAboutHotels(data));
-                setLoading(false);
+                getInfoFromApi(HoteOffers(city.id))
+                  .then((data) => {
+                     if (data.length === 0) {
+                      setNotHotels(true);
+                     } else {
+                       setNotHotels(false);
+                       dispatch(getHotelPrices(data));
+                       setLoading(false);
+                    }
+                  })
               }
             })
             .catch((err) => console.log(err))
@@ -61,6 +76,13 @@ export const ApartmentsMoscow = () => {
   useEffect(() => {
     getHotels();
   }, [infoForm]);
+
+  useEffect(() => {
+    const filteredId = hotelOffers.map((item) => item.hotel_id);
+    const idHotelOffers = hotels.filter((i) => filteredId.includes(i.id)
+  );
+  setFilteredHotels(idHotelOffers);
+}, [hotelOffers]);
 
   return (
     <>
@@ -94,7 +116,7 @@ export const ApartmentsMoscow = () => {
             <h2>Отелей в данном городе не найдено</h2>
           ) : (
             <ul className="hotel-list">
-              {hotels?.map((item) => (
+              {filteredHotels?.map((item) => (
                 <li className="hotel-item" key={item.id}>
                   <CardHotel hotel={item} />
                 </li>

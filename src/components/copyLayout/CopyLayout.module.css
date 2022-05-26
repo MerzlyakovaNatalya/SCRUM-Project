@@ -28,8 +28,13 @@
 
 .wrapl_ink {
     margin: 0px 10px 10px 0px;
+    border-style: outset;
+    width: 15%;
+    margin-left: 40px;
+    padding: 3px;
   }
 
 .link {
-    margin-left: 35px;
+    margin-left: 5px;
+    text-decoration: none;
   }

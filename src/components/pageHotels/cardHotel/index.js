@@ -12,8 +12,11 @@ export const CardHotel = ({ hotel }) => {
 
   const getOneHotelOffer = () => {
    const filteredHotel = hotelOffers.find((item) => item.hotel_id === hotel.id);
+   console.log("это filteredHotel");
+  console.log(filteredHotel);
    setOneHotelOffer(filteredHotel)
   }
+  console.log("это oneHotelOffer");
   console.log(oneHotelOffer);
   //const hotelPrice = useSelector((state) => state.hotel_price);
 
