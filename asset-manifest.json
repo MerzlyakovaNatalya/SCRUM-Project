@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/SCRUM-Project/static/css/main.c165d750.css",
-    "main.js": "/SCRUM-Project/static/js/main.b90c35db.js",
+    "main.js": "/SCRUM-Project/static/js/main.812f5a60.js",
     "static/js/787.b2dc4aa5.chunk.js": "/SCRUM-Project/static/js/787.b2dc4aa5.chunk.js",
     "static/media/mskow_2.jpg": "/SCRUM-Project/static/media/mskow_2.add816ea279ce36dfd9e.jpg",
     "static/media/zamok.jpg": "/SCRUM-Project/static/media/zamok.3e2f75764804b21facdd.jpg",
@@ -19,11 +19,11 @@
     "static/media/Brend_4.png": "/SCRUM-Project/static/media/Brend_4.6513934f4b8312d3ef7e.png",
     "index.html": "/SCRUM-Project/index.html",
     "main.c165d750.css.map": "/SCRUM-Project/static/css/main.c165d750.css.map",
-    "main.b90c35db.js.map": "/SCRUM-Project/static/js/main.b90c35db.js.map",
+    "main.812f5a60.js.map": "/SCRUM-Project/static/js/main.812f5a60.js.map",
     "787.b2dc4aa5.chunk.js.map": "/SCRUM-Project/static/js/787.b2dc4aa5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c165d750.css",
-    "static/js/main.b90c35db.js"
+    "static/js/main.812f5a60.js"
   ]
 }
