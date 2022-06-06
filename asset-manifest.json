@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/SCRUM-Project/static/css/main.c165d750.css",
+    "main.js": "/SCRUM-Project/static/js/main.b90c35db.js",
+    "static/js/787.b2dc4aa5.chunk.js": "/SCRUM-Project/static/js/787.b2dc4aa5.chunk.js",
+    "static/media/mskow_2.jpg": "/SCRUM-Project/static/media/mskow_2.add816ea279ce36dfd9e.jpg",
+    "static/media/zamok.jpg": "/SCRUM-Project/static/media/zamok.3e2f75764804b21facdd.jpg",
+    "static/media/mobilV.png": "/SCRUM-Project/static/media/mobilV.a68625e472f90e4b76f4.png",
+    "static/media/plyazhi.jpg": "/SCRUM-Project/static/media/plyazhi.97350df91f42ef4c0175.jpg",
+    "static/media/Krasivaya-priroda.jpg": "/SCRUM-Project/static/media/Krasivaya-priroda.1bc04bd6513d8db97ac4.jpg",
+    "static/media/moscow.jpg": "/SCRUM-Project/static/media/moscow.9d9b27fdca0591d31458.jpg",
+    "static/media/Peter.jpg": "/SCRUM-Project/static/media/Peter.d1b050190fb4a33f84de.jpg",
+    "static/media/Crimea.jpg": "/SCRUM-Project/static/media/Crimea.035dd1373c7a94cc4b64.jpg",
+    "static/media/sochi.jpg": "/SCRUM-Project/static/media/sochi.03b811a1d5026b73756e.jpg",
+    "static/media/hotel_1.jpg": "/SCRUM-Project/static/media/hotel_1.fb73b92a132fb32b7cff.jpg",
+    "static/media/hotel_3.jpg": "/SCRUM-Project/static/media/hotel_3.bd5fd8c0bf3957d320ed.jpg",
+    "static/media/hotel_4.jpg": "/SCRUM-Project/static/media/hotel_4.b8b55b9ed5dc8eb2bd5c.jpg",
+    "static/media/hotel_2.jpg": "/SCRUM-Project/static/media/hotel_2.a0ee07b12cef8d555ef4.jpg",
+    "static/media/Brend_4.png": "/SCRUM-Project/static/media/Brend_4.6513934f4b8312d3ef7e.png",
+    "index.html": "/SCRUM-Project/index.html",
+    "main.c165d750.css.map": "/SCRUM-Project/static/css/main.c165d750.css.map",
+    "main.b90c35db.js.map": "/SCRUM-Project/static/js/main.b90c35db.js.map",
+    "787.b2dc4aa5.chunk.js.map": "/SCRUM-Project/static/js/787.b2dc4aa5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c165d750.css",
+    "static/js/main.b90c35db.js"
+  ]
+}
